@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yurii Cherevko, data analyst</title>
+<meta name="description" content="Data analyst in iGaming: metric definitions in SQL, automation in Python, reporting in Tableau. Selected work, dashboards on Tableau Public and an open analytics case on GitHub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#">Yurii Cherevko</a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#dashboards">Dashboards</a>
+    <a href="#case">Open case</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>The systems<br>behind the numbers.</h1>
+    <p class="lead">Data analyst in iGaming. Metric definitions in SQL, automation in Python, reporting in Tableau, and a habit of fixing the data before touching the chart.</p>
+    <p class="actions">
+      <a class="cta" href="Yurii_Cherevko_CV.pdf" download>Download CV</a>
+      <a class="link" href="https://www.linkedin.com/in/yurii-cherevko-analyst/">LinkedIn</a>
+      <a class="link" href="https://public.tableau.com/app/profile/yurii.cherevko">Tableau Public</a>
+      <a class="link" href="https://github.com/yurii-work-data">GitHub</a>
+    </p>
+  </div>
+  <img class="photo" src="assets/photo.jpg" alt="Yurii Cherevko" width="220" height="275">
+</section>
+
+<div class="strip">
+  <div><b>3</b><span>years in online casino and sportsbook</span></div>
+  <div><b>30M+</b><span>records in a working query</span></div>
+  <div><b>25</b><span>reports that now run themselves</span></div>
+  <div><b>24h</b><span>from anomaly to alert</span></div>
+</div>
+
+<section class="statement-wrap">
+  <p class="statement">Most reporting problems are data problems. Agree on definitions, clean the data once at the source, automate the refresh. The dashboard is the last ten percent.</p>
+</section>
+
+<section id="work">
+  <h2>Selected work</h2>
+
+  <article class="story">
+    <div>
+      <h3>Anomaly detection for financial and product KPIs</h3>
+      <p class="where">iGaming operator, 2026</p>
+      <p class="num">24h<small>instead of several days</small></p>
+    </div>
+    <div>
+      <p>Deviations in deposits, withdrawals, GGR and product metrics were noticed days late, usually by someone who happened to open a dashboard. There was no single place where "normal" was defined.</p>
+      <p>Each metric is now defined once in SQL models in Snowflake, so the alert and the report use the same number. A scheduled Python job compares every daily value with a robust baseline built from the previous weeks, writes deviations to an alerts table and notifies the metric owner. Tableau shows the open alerts next to the KPI trend.</p>
+      <p>The same models feed the regular dashboards, so there is one definition of every KPI in the company.</p>
+    </div>
+  </article>
+
+  <article class="story">
+    <div>
+      <h3>Reporting that runs itself</h3>
+      <p class="where">iGaming operator, 2026</p>
+      <p class="num">30h<small>a week returned to the team</small></p>
+    </div>
+    <div>
+      <p>Twenty-five recurring reports on financial and operational metrics were assembled by hand every week, each with slightly different filters and definitions.</p>
+      <p>The logic moved into a layer of documented SQL models in Snowflake, the refresh and distribution into Python, the presentation into Tableau. Then the docs, and the onboarding of the analysts who maintain it.</p>
+      <p>40 stakeholders across 20 teams read the same set of numbers, and 22 analysts work from the same models.</p>
+    </div>
+  </article>
+
+  <article class="story">
+    <div>
+      <h3>The players who only came for the bonus</h3>
+      <p class="where">Online betting and casino operator, 2025</p>
+      <p class="num">1 rule<small>CRM and fraud teams could act on</small></p>
+    </div>
+    <div>
+      <p>Part of the bonus budget was going to players who deposited the minimum, wagered exactly to the requirement, withdrew and never came back. Nobody could say how large that group was.</p>
+      <p>A behavioural definition in SQL, built from deposit size, wagering pattern against the requirement, withdrawal timing and activity afterwards, made the segment countable and its cost visible. Changes to the bonus terms and crediting rules followed.</p>
+      <p>The segment shrank significantly, and the bonus budget went to players who actually play. The same method is reproduced on synthetic data in the open case below.</p>
+    </div>
+  </article>
+
+  <p class="also">Also: an acquisition channel review that compared channels by player value instead of cost per registration, behind a 25% lower CPA after budget reallocation; a registration-to-first-deposit funnel analysis behind a 22% conversion lift; A/B tests for bonuses, CRM campaigns and product changes.</p>
+</section>
+
+<section id="dashboards">
+  <h2>Dashboards on Tableau Public</h2>
+  <figure class="dash">
+    <a href="https://public.tableau.com/app/profile/yurii.cherevko/viz/PlayerAcquisitionRevenueDashboard/KPIDashboard"><img src="assets/dashboard_acquisition.jpg" alt="Player Acquisition and Revenue dashboard" loading="lazy"></a>
+    <figcaption><span>Player acquisition and revenue: GGR, NGR, deposits, registrations and first deposits by month, channel and product. Synthetic data.</span><a href="https://public.tableau.com/app/profile/yurii.cherevko/viz/PlayerAcquisitionRevenueDashboard/KPIDashboard">Open on Tableau Public</a></figcaption>
+  </figure>
+  <figure class="dash">
+    <a href="https://public.tableau.com/app/profile/yurii.cherevko/viz/PlanvsFactiGamingbrands/Dashboard1"><img src="assets/dashboard_planvsfact.jpg" alt="Plan vs Fact dashboard for iGaming brands" loading="lazy"></a>
+    <figcaption><span>Plan vs fact, twelve brands: five KPIs against the monthly plan, month to date, by brand and country. Synthetic data.</span><a href="https://public.tableau.com/app/profile/yurii.cherevko/viz/PlanvsFactiGamingbrands/Dashboard1">Open on Tableau Public</a></figcaption>
+  </figure>
+</section>
+
+<section id="case">
+  <h2>Open case on GitHub</h2>
+  <article class="story">
+    <div>
+      <h3>iGaming analytics case</h3>
+      <p class="where">Synthetic data, PostgreSQL and Python, 2026</p>
+      <p class="num">6x<small>the cost of a depositor from paid social against referral</small></p>
+    </div>
+    <div>
+      <p>A full analytics workflow on a synthetic casino dataset: 12,000 registrations, deposits, play activity, bonuses and marketing spend, with the usual problems planted in the data. Cleaning layer, cohort retention, channel economics and an A/B test of a bigger welcome bonus in SQL, plus a Python monitor that flags anomalies in daily KPIs.</p>
+      <p>Paid social buys the cheapest registrations and the most expensive depositors. The bigger welcome bonus lifts first deposits by 23% but triples the share of bonus chasers and cuts net revenue per registration from 13.9 to 4.5 EUR.</p>
+      <p><a class="link" href="https://github.com/yurii-work-data/igaming-analytics-case">Code and write-up on GitHub</a></p>
+    </div>
+  </article>
+  <figure class="dash chart">
+    <a href="https://github.com/yurii-work-data/igaming-analytics-case"><img src="assets/case_ab_test.png" alt="Welcome bonus A/B test: more first deposits, more bonus chasers, less net revenue" loading="lazy"></a>
+  </figure>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <dl class="timeline">
+    <div><dt>2026 to now</dt><dd>Data analyst, iGaming operator (under NDA). Remote.</dd></div>
+    <div><dt>2024 to 2026</dt><dd>Data analyst, FAVBET. Online betting and casino.</dd></div>
+    <div><dt>2023 to 2024</dt><dd>Freelance data analyst, 20 projects in e-commerce, digital marketing and local services.</dd></div>
+    <div><dt>2015 to 2020</dt><dd>Master's degree in Computer Systems Analysis, Dnipro University of Technology.</dd></div>
+  </dl>
+  <p class="skills">SQL every day: complex joins, CTEs, window functions, data models in Snowflake and PostgreSQL. Python with pandas for cleaning, validation, statistics and automation. Tableau for reporting, Excel and Google Sheets for models, Power BI when the team uses it. The metrics are the iGaming ones: registrations, FTD, deposits, GGR and NGR, retention, LTV, bonus cost, channel ROI.</p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Open to data analyst roles in iGaming, remote or relocation, and to freelance dashboard work.</p>
+  <p class="contact-lines">
+    <a href="mailto:yurii.work.data@gmail.com">yurii.work.data@gmail.com</a>
+    <a href="https://www.linkedin.com/in/yurii-cherevko-analyst/">linkedin.com/in/yurii-cherevko-analyst</a>
+    <a href="https://public.tableau.com/app/profile/yurii.cherevko">public.tableau.com/app/profile/yurii.cherevko</a>
+    <a href="https://github.com/yurii-work-data">github.com/yurii-work-data</a>
+  </p>
+</section>
+
+</main>
+
+<footer>Yurii Cherevko, 2026. Dashboards and the open case use synthetic data; employer data stays with employers.</footer>
+
+</body>
+</html>
